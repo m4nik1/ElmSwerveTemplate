@@ -28,8 +28,8 @@ public final class Constants {
   public static final double driveBaseRadius = Math.hypot(wheelBase / 2.0, trackWidth / 2.0);
   public static final double wheelDia = Units.inchesToMeters(4.0);
   public static final double wheelCircum = Units.inchesToMeters(4.0) * Math.PI;
-  public static final double driveRatio = 5.9;
-  public static final double angleRatio = 18.75/1;
+  public static final double driveRatio = 5.9; // mk4n module gear ratio
+  public static final double angleRatio = 18.75/1; // for mk4n module gear ratio
   public static final double speedMultiTeleop = 0.65;
   public static final double speedTurboTeleop = .85;
   public static final double maxSpeed = 4; // meters per second
