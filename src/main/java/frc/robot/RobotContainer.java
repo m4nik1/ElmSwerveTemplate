@@ -5,6 +5,7 @@
 package frc.robot;
 
 import frc.robot.commands.Autos;
+import frc.robot.commands.DriveCommands;
 import frc.robot.subsystems.DriveTrain;
 import frc.robot.subsystems.ExampleSubsystem;
 import edu.wpi.first.wpilibj2.command.Command;
@@ -16,6 +17,12 @@ public class RobotContainer {
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
     // Configure the trigger bindings
+
+
+    // set the default command for drivetrain to teleop drive
+    // Fill in the nulls with negative joystick inputs
+    driveTrain.setDefaultCommand(DriveCommands.teleopDrive(null, null, null));
+
     configureBindings();
   }
 
@@ -23,6 +30,9 @@ public class RobotContainer {
   // Driver and operator controls go here
   private void configureBindings() {
   }
+
+  
+
 
 
   public Command getAutonomousCommand() {
