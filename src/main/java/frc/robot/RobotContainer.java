@@ -5,11 +5,13 @@
 package frc.robot;
 
 import frc.robot.commands.Autos;
+import frc.robot.subsystems.DriveTrain;
 import frc.robot.subsystems.ExampleSubsystem;
 import edu.wpi.first.wpilibj2.command.Command;
 
 public class RobotContainer {
   ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
+  public static DriveTrain driveTrain = new DriveTrain();
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
