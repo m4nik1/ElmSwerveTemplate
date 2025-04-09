@@ -31,9 +31,6 @@ public class RobotContainer {
   private void configureBindings() {
   }
 
-  
-
-
 
   public Command getAutonomousCommand() {
     // An example command will be run in autonomous

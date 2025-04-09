@@ -52,6 +52,9 @@ public class DriveTrain extends SubsystemBase {
     odom =
 
     // Call Reset gyro at startup
+
+
+    // AutoBuilder goes here for auto
   }
 
   // Return the angle of robot in Rotation2d
