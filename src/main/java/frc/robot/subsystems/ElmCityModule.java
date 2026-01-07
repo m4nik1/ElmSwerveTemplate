@@ -207,10 +207,10 @@ public class ElmCityModule extends SubsystemBase {
 
     driveVelocity.Slot = 0;
 
-      // sets the feedforward to simple feedforward calculation with the requested
+    // sets the feedforward to simple feedforward calculation with the requested
     driveVelocity.FeedForward = driveKfCalc.calculate(vel);
 
-      // Calculate using feedforward
+    // Calculate using feedforward
     driveMotor.setControl(driveVelocity);
   }
 
@@ -272,13 +272,11 @@ public class ElmCityModule extends SubsystemBase {
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
-    // SmartDashboard.putNumber("Module Angle " + modNum, getAngleDegrees());
     SmartDashboard.putNumber("Distance (M)" + modNum, getDrivePosMeters());
     SmartDashboard.putNumber("Nac coder rot " + modNum, getNac());
 
     Logger.recordOutput("Distance (M)" + modNum, getDrivePosMeters());
     Logger.recordOutput("Velocity " + modNum , getDriveVelocityConversion());
     Logger.recordOutput("Module Angle " + modNum, getAngleDegrees());
-    // SmartDashboard.putNumber("Mod vel " + modNum, getDriveVelocityConversion());
   }
 }

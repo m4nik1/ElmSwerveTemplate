@@ -1,6 +1,3 @@
-// Copyright (c) FIRST and other WPILib contributors.
-// Open Source Software; you can modify and/or share it under the terms of
-// the WPILib BSD license file in the root directory of this project.
 
 package frc.robot.subsystems;
 
@@ -26,6 +23,7 @@ import edu.wpi.first.wpilibj.smartdashboard.Field2d;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import edu.wpi.first.wpilibj2.command.sysid.SysIdRoutine;
 import frc.robot.Constants;
 
 public class DriveTrain extends SubsystemBase {
@@ -45,7 +43,7 @@ public class DriveTrain extends SubsystemBase {
     // Make the module array
     elmCityModules = 
 
-    // Make the gyro
+    // Make the gyro (pigeon)
     gyro = 
 
     // Make odom variable
@@ -55,6 +53,7 @@ public class DriveTrain extends SubsystemBase {
 
 
     // AutoBuilder goes here for auto
+
   }
 
   // Return the angle of robot in Rotation2d
@@ -97,6 +96,10 @@ public class DriveTrain extends SubsystemBase {
 
     // 5. set the desired state using for loop
   }
+
+  public Command sysIdQuasistatic(SysIdRoutine.Direction direction) {
+    return m_sysIdRoutineToApply.quasistatic(direction);
+}
 
   public Pose2d getRobotPose2d() {
   }
